@@ -23,7 +23,7 @@ namespace WebSite.Mvc.Controllers
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
-            ViewBag.Tabla = Utilitario.CalculadoraInteres.ObtenerAmortizacionAnual(1000000, 3.2f, 12);
+           // ViewBag.Tabla = Utilitario.CalculadoraInteres.ObtenerAmortizacionAnual(1000000, 3.2f, 12);
             return View();
         }
 
