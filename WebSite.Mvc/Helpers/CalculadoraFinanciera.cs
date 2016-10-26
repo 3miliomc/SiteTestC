@@ -15,28 +15,33 @@ namespace WebSite.Mvc.Helpers
         public int Tasa { get; set; }
 
 
-        public static List<AmortizacionMensual> ObtenerAmortizacionAnual(int prestamo, float tasa, int plazo)
+        public static List<AmortizacionMensual> ObtenerAmortizacionAnual(double prestamo, double pie, float tasa, int plazo, double mensual)
         {
             var lista = new List<AmortizacionMensual>();
 
-            double cuotas = (prestamo * tasa) / 12;
-
-            double interes = 1 - Math.Pow(1 + tasa / 12, plazo);
-
-            for (int p = 0; p < plazo; p++)
+            var endingBalance = prestamo - pie;
+            var rate = tasa / 1200.0;
+            var monthly = rate > 0 ? ((rate + rate / (Math.Pow(1 + rate, plazo) - 1)) * endingBalance) : endingBalance / plazo;
+            
+            var count = 1;
+            while (count <= mensual)
             {
+                var interestPaid = endingBalance * rate;
+                var principlePaid = mensual - interestPaid;
+                endingBalance -= principlePaid;
+
                 var pago = new AmortizacionMensual()
                 {
-                    Numero = p + 1,
-                    Cuota = cuotas,
-                    Interes = interes,
-                    Capital = prestamo - interes,
-                    Saldo = prestamo - cuotas
+                    Numero = count,
+                    PagoInicial = String.Format("{0:C}", interestPaid),
+                    CapitalPagado = String.Format("{0:C}",
+                          principlePaid),
+                    Saldo = String.Format("{0:C}", endingBalance)
                 };
 
                 lista.Add(pago);
+                count++;
             }
-
             return lista;
         }
     }
