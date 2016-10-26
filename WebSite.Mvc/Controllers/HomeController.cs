@@ -24,8 +24,8 @@ namespace WebSite.Mvc.Controllers
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
-            ViewBag.Tabla = CalculadoraInteres.ObtenerAmortizacionAnual(2500000, 250000, 3.2f, 12, 12);
-            return View();
+            var model = CalculadoraInteres.ObtenerAmortizacionAnual(2500000, 250000, 3.2f, 12, 12);
+            return View(model);
         }
 
         

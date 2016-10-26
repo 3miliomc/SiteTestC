@@ -1,4 +1,5 @@
 ﻿@using WebSite.Mvc.Helpers
+@model List<AmortizacionMensual>
 @{
     ViewBag.Title = "Amortizacion Anual";
 }
@@ -21,22 +22,25 @@
                 Saldo
             </th>
         </tr>
-@foreach (var d in (ViewBag.Tabla as List<AmortizacionMensual>))
-{
-        <tr>
-            <td>
-                @d.Numero
-            </td>
-            <td>
-                @d.PagoInicial
-            </td>
-            <td>
-                @d.CapitalPagado
-            </td>
-            <td>
-                @d.Saldo
-            </td>
-        </tr>
-}
+
     </thead>
+    <tbody>
+        @foreach (var d in Model)
+        {
+            <tr>
+                <td>
+                    @d.Numero
+                </td>
+                <td>
+                    @d.PagoInicial
+                </td>
+                <td>
+                    @d.CapitalPagado
+                </td>
+                <td>
+                    @d.Saldo
+                </td>
+            </tr>
+        }
+    </tbody>
 </table>
