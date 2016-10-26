@@ -247,9 +247,9 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Utility\Utility.csproj">
+    <ProjectReference Include="..\Utility\Utilitario.csproj">
       <Project>{4cd5ad0c-a258-44ee-be07-3a07ed82405f}</Project>
-      <Name>Utility</Name>
+      <Name>Utilitario</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

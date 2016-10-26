@@ -5,9 +5,9 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebSite.Mvc", "WebSite.Mvc\WebSite.Mvc.csproj", "{637821B6-EA8D-4448-8ADE-84B5FDDA1534}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utility", "Utility\Utility.csproj", "{4CD5AD0C-A258-44EE-BE07-3A07ED82405F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utilitario", "Utility\Utilitario.csproj", "{4CD5AD0C-A258-44EE-BE07-3A07ED82405F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utility.Test", "Utility.Test\Utility.Test.csproj", "{6E5B5895-767C-4EA3-B0C2-344AC562C186}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utilitario.Test", "Utility.Test\Utilitario.Test.csproj", "{6E5B5895-767C-4EA3-B0C2-344AC562C186}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

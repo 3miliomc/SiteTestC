@@ -1,4 +1,4 @@
-﻿namespace Utility
+﻿namespace Utilitario
 {
     public  class AmortizacionMensual
     {
