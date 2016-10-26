@@ -66,9 +66,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Utility\Utilitario.csproj">
-      <Project>{4cd5ad0c-a258-44ee-be07-3a07ed82405f}</Project>
-      <Name>Utilitario</Name>
+    <ProjectReference Include="..\WebSite.Mvc\WebSite.Mvc.csproj">
+      <Project>{637821b6-ea8d-4448-8ade-84b5fdda1534}</Project>
+      <Name>WebSite.Mvc</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
