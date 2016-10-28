@@ -9,7 +9,7 @@ using Xunit;
 
 namespace WebSite.Mvc.FunctionalTest
 {
-        public class SeleniumTest: IClassFixture<FirefoxDriver>
+        public class SeleniumTest
     {
         private string baseURL = "http://191.235.87.105/SiteTestC/";
         private RemoteWebDriver driver;
