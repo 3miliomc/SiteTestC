@@ -1,15 +1,10 @@
-﻿using OpenQA.Selenium.Firefox;
-using OpenQA.Selenium.Remote;
+﻿using OpenQA.Selenium.Remote;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xunit;
 
 namespace WebSite.Mvc.FunctionalTest
 {
-        public class SeleniumTest
+    public class SeleniumTest
     {
         private string baseURL = "http://191.235.87.105/SiteTestC/";
         private RemoteWebDriver driver;
@@ -30,7 +25,7 @@ namespace WebSite.Mvc.FunctionalTest
             driver.Manage().Window.Maximize();
             driver.Navigate().GoToUrl(this.baseURL);
             //driver.FindElementById("search - box").Clear();
-            driver.FindElementById("search - box").SendKeys("tire");
+            driver.FindElementById("link-contact").Click();
             //do other Selenium things here!
         }
     }
