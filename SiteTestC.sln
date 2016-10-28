@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utilitario.Test", "Utility.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebSiteTest.FunctionalTest", "WebSiteTest.FunctionalTest\WebSiteTest.FunctionalTest.csproj", "{FA4FBA18-2D26-424E-97B2-103C6BD1703E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebSite.Mvc.FunctionalTest", "WebSite.Mvc.FunctionalTest\WebSite.Mvc.FunctionalTest.csproj", "{5E21B3AE-2B53-4A2E-924E-4C0099FF40A6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{FA4FBA18-2D26-424E-97B2-103C6BD1703E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FA4FBA18-2D26-424E-97B2-103C6BD1703E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FA4FBA18-2D26-424E-97B2-103C6BD1703E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E21B3AE-2B53-4A2E-924E-4C0099FF40A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E21B3AE-2B53-4A2E-924E-4C0099FF40A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E21B3AE-2B53-4A2E-924E-4C0099FF40A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E21B3AE-2B53-4A2E-924E-4C0099FF40A6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

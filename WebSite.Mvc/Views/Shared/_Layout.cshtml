@@ -24,7 +24,7 @@
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
                     <li>@Html.ActionLink("Acerca de", "About", "Home")</li>
-                    <li>@Html.ActionLink("Amortización", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Amortización", "Contact", "Home", new { id="link-contact" })</li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
