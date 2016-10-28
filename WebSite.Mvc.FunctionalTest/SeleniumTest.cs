@@ -17,7 +17,7 @@ namespace WebSite.Mvc.FunctionalTest
         //[Priority(19)]
         //[Owner("FireFox")] //Using Owner as Category trait is not supported by the DTA Task
         [Fact]
-        public void RemoteSelenium()
+        public void ClickEnContacto()
         {
             DesiredCapabilities capability = DesiredCapabilities.Firefox();
             Uri server = new Uri("http://13.88.14.110:4444/wd/hub");
@@ -26,6 +26,32 @@ namespace WebSite.Mvc.FunctionalTest
             driver.Navigate().GoToUrl(this.baseURL);
             //driver.FindElementById("search - box").Clear();
             driver.FindElementById("link-contact").Click();
+            //do other Selenium things here!
+        }
+
+        [Fact]
+        public void ClickEnAcerca()
+        {
+            DesiredCapabilities capability = DesiredCapabilities.Firefox();
+            Uri server = new Uri("http://13.88.14.110:4444/wd/hub");
+            this.driver = new RemoteWebDriver(server, capability);
+            driver.Manage().Window.Maximize();
+            driver.Navigate().GoToUrl(this.baseURL);
+            //driver.FindElementById("search - box").Clear();
+            driver.FindElementById("link-acerca").Click();
+            //do other Selenium things here!
+        }
+
+        [Fact]
+        public void ClickEnInicio()
+        {
+            DesiredCapabilities capability = DesiredCapabilities.Firefox();
+            Uri server = new Uri("http://13.88.14.110:4444/wd/hub");
+            this.driver = new RemoteWebDriver(server, capability);
+            driver.Manage().Window.Maximize();
+            driver.Navigate().GoToUrl(this.baseURL);
+            //driver.FindElementById("search - box").Clear();
+            driver.FindElementById("link-inicio").Click();
             //do other Selenium things here!
         }
     }
