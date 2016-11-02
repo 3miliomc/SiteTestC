@@ -3,21 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WebSite.Mvc.Models;
 
 namespace WebSite.Mvc.Helpers
 {
     public class CalculadoraInteres
     {
-        public int Deuda { get; set; }
-
-        public int Pagado { get; set; }
-
-        public int Tasa { get; set; }
-
-
-        public static List<AmortizacionMensual> ObtenerAmortizacionAnual(double prestamo, double pie, float tasa, int plazo, double mensual)
+        
+        public static List<AmortizacionUnitaria> ObtenerAmortizacionAnual(double prestamo, double pie, float tasa, int plazo, double mensual)
         {
-            var lista = new List<AmortizacionMensual>();
+            var lista = new List<AmortizacionUnitaria>();
 
             var endingBalance = prestamo - pie;
             var rate = tasa / 1200.0;
@@ -30,7 +25,7 @@ namespace WebSite.Mvc.Helpers
                 var principlePaid = mensual - interestPaid;
                 endingBalance -= principlePaid;
 
-                var pago = new AmortizacionMensual()
+                var pago = new AmortizacionUnitaria()
                 {
                     Numero = count,
                     PagoInicial = String.Format("{0:C}", interestPaid),

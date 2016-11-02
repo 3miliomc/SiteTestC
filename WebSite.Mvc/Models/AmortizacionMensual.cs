@@ -1,6 +1,6 @@
-﻿namespace WebSite.Mvc.Helpers
+﻿namespace WebSite.Mvc.Models
 {
-    public  class AmortizacionMensual
+    public  class AmortizacionUnitaria
     {
         public int Numero { get; set; }
         public string PagoInicial { get; set; }

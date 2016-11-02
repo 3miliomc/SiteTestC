@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using WebSite.Mvc.Helpers;
+using WebSite.Mvc.Models;
 
 namespace WebSite.Mvc.Controllers
 {
@@ -21,13 +22,19 @@ namespace WebSite.Mvc.Controllers
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult CalcularPrestamo()
         {
-            ViewBag.Message = "Your contact page.";
-            var model = CalculadoraInteres.ObtenerAmortizacionAnual(2500000, 250000, 3.2f, 12, 12);
+            var model = new AmortizacionInputModel();
             return View(model);
         }
 
-        
+        [HttpPost]
+        public ActionResult CalcularPrestamo(AmortizacionInputModel model)
+        {
+            model.Amortizaciones = CalculadoraInteres.ObtenerAmortizacionAnual(model.Prestamo, model.Pie, model.Tasa, model.Plazo, model.Mensual);
+            return View(model);
+        }
+
+
     }
 }

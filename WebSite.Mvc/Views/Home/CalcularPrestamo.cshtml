@@ -1,0 +1,70 @@
+﻿@using WebSite.Mvc.Models
+@model AmortizacionInputModel
+@{
+    ViewBag.Title = "Amortizacion Anual";
+}
+<h2>@ViewBag.Title.</h2>
+@using (Ajax.BeginForm("CalcularPrestamo", null, new AjaxOptions() { HttpMethod = "POST", InsertionMode = InsertionMode.Replace, UpdateTargetId = "containerUpdate" }, new { @class = "form-inline" }))
+    { 
+    <div class="form-group">
+        @Html.LabelFor(x => x.Prestamo)
+        @Html.TextBoxFor(x=>x.Prestamo, new { @class = "form-control", placeholder = "Préstamo" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(x => x.Pie)
+        @Html.TextBoxFor(x => x.Pie, new { @class = "form-control", placeholder = "Pie" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(x => x.Tasa)
+        @Html.TextBoxFor(x => x.Tasa, new { @class = "form-control", placeholder = "Tasa %", type = "number", min = "0", max = "30", step = "0.01" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(x => x.Plazo)
+        @Html.TextBoxFor(x => x.Plazo, new { @class = "form-control", placeholder = "Plazo" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(x => x.Mensual)
+        @Html.TextBoxFor(x => x.Mensual, new { @class = "form-control", placeholder = "Meses", type = "number", min = "1", max = "60", step = "1" })
+    </div>
+    <button type="submit" class="btn btn-default">Calcular</button>
+    }
+<div id="containerUpdate">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    N.
+                </th>
+                <th>
+                    Capital Inicial
+                </th>
+                <th>
+                    Capital Pagado
+                </th>
+                <th>
+                    Saldo
+                </th>
+            </tr>
+
+        </thead>
+        <tbody>
+            @foreach (var d in Model.Amortizaciones)
+            {
+                <tr>
+                    <td>
+                        @d.Numero
+                    </td>
+                    <td>
+                        @d.PagoInicial
+                    </td>
+                    <td>
+                        @d.CapitalPagado
+                    </td>
+                    <td>
+                        @d.Saldo
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
