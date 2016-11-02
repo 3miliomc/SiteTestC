@@ -13,7 +13,7 @@ namespace Utilitario.Test
         public void PassingTestMonths12()
         {
             var count = CalculadoraInteres.ObtenerAmortizacionAnual(2500000, 250000, 3.2f, 12, 12).Count;
-            Assert.Equal(12, count);
+            Assert.Equal(1, count);
         }
         
     }
