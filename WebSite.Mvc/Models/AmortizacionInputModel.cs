@@ -11,7 +11,7 @@ namespace WebSite.Mvc.Models
 
         public double Pie { get; set; }
 
-        public float Tasa { get; set; }
+        public double Tasa { get; set; }
 
         public int Plazo { get; set; }
 
